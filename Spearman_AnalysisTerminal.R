@@ -45,14 +45,14 @@ p <- ggplot() + geom_point(aes(x=bl.data$BL.raxml[-which(Class.Rax%in%c(5,6))],
                                y=bl.data$BL.phyml.NonOp[-which(Class.Phy%in%c(5,6))]))+
   #geom_smooth(aes(x=bl.data$BL.raxml[which(bl.data$BL.raxml<max(bl.data$BL.raxml))],
   #               y=bl.data$BL.phyml[which(bl.data$BL.phyml<max(bl.data$BL.phyml))]))+
-  ylab("PhyML-NonOptimize Branch Length")+ xlab("RAxML Branch Length")+
+  ylab("PhyML-NonOptimize Branch Length (Terminals)")+ xlab("RAxML Branch Length (Terminals)")+
   geom_abline(intercept=0,slope=pearson$estimate)+
   geom_label(label=paste("rho",round((pearson$estimate),digits=4),sep = ": "),
              aes(x=0.05,y=0.05),
              size=12)+
-  geom_label(label=paste("p-value",pearson$p.value,sep = ": "),
-             aes(x=0.05,y=0.045),
-             size=12)+
+  #geom_label(label=paste("p-value",pearson$p.value,sep = ": "),
+  #           aes(x=0.05,y=0.045),
+  #           size=12)+
   theme(axis.text = element_text(size = 12),
         axis.title.y = element_text(size = 20,),
         axis.title.x = element_text(size = 20,))
@@ -91,14 +91,14 @@ p <- ggplot() + geom_point(aes(x=bl.data$BL.raxml[-which(Class.Rax%in%c(5,6))],
                                y=bl.data$BL.phyml.Op[-which(Class.Phy2%in%c(5,6))]))+
   #geom_smooth(aes(x=bl.data$BL.raxml[which(bl.data$BL.raxml<max(bl.data$BL.raxml))],
   #               y=bl.data$BL.phyml[which(bl.data$BL.phyml<max(bl.data$BL.phyml))]))+
-  ylab("PhyML-Optimize Branch Length")+ xlab("RAxML Branch Length")+
+  ylab("PhyML-Optimize Branch Length (Terminals)")+ xlab("RAxML Branch Length (Terminals)")+
   geom_abline(intercept=0,slope=pearson$estimate)+
   geom_label(label=paste("rho",round(pearson$estimate,digits=4),sep = ": "),
              aes(x=0.05,y=0.05),
              size=12)+
-  geom_label(label=paste("p-value",pearson$p.value,sep = ": "),
-             aes(x=0.05,y=0.045),
-             size=12)+
+  #geom_label(label=paste("p-value",pearson$p.value,sep = ": "),
+  #           aes(x=0.05,y=0.045),
+  #           size=12)+
   theme(axis.text = element_text(size = 12),
         axis.title.y = element_text(size = 20,),
         axis.title.x = element_text(size = 20,))
@@ -137,14 +137,14 @@ p <- ggplot() + geom_point(aes(x=bl.data$BL.phyml.Op[-which(Class.Phy2%in%c(5,6)
                                y=bl.data$BL.phyml.NonOp[-which(Class.Phy%in%c(5,6))]))+
   #geom_smooth(aes(x=bl.data$BL.raxml[which(bl.data$BL.raxml<max(bl.data$BL.raxml))],
   #               y=bl.data$BL.phyml[which(bl.data$BL.phyml<max(bl.data$BL.phyml))]))+
-  ylab("PhyML Non-Optimize Branch Length")+ xlab("PhyML Optimize Branch Length")+
+  ylab("PhyML Non-Optimize Branch Length (Terminals)")+ xlab("PhyML Optimize Branch Length (Terminals)")+
   geom_abline(intercept=0,slope=pearson$estimate)+
   geom_label(label=paste("rho",round(pearson$estimate,digits=4),sep = ": "),
              aes(x=0.048,y=0.05),
              size=12)+
-  geom_label(label=paste("p-value",pearson$p.value,sep = ": "),
-             aes(x=0.048,y=0.045),
-             size=12)+
+  #geom_label(label=paste("p-value",pearson$p.value,sep = ": "),
+  #           aes(x=0.048,y=0.045),
+  #           size=12)+
   theme(axis.text = element_text(size = 12),
         axis.title.y = element_text(size = 20,),
         axis.title.x = element_text(size = 20,))
