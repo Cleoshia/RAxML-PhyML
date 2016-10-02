@@ -53,9 +53,12 @@ p <- ggplot() + geom_point(aes(x=bl.data$BL.raxml[-which(Class.Rax%in%c(5,6))],
   #geom_label(label=paste("p-value",pearson$p.value,sep = ": "),
   #           aes(x=0.05,y=0.045),
   #           size=12)+
+  ggtitle("B")+
   theme(axis.text = element_text(size = 12),
         axis.title.y = element_text(size = 20,),
-        axis.title.x = element_text(size = 20,))
+        axis.title.x = element_text(size = 20,),
+        plot.title =  element_text(size=40))
+  
 
 p
 
@@ -99,9 +102,11 @@ p <- ggplot() + geom_point(aes(x=bl.data$BL.raxml[-which(Class.Rax%in%c(5,6))],
   #geom_label(label=paste("p-value",pearson$p.value,sep = ": "),
   #           aes(x=0.05,y=0.045),
   #           size=12)+
+  ggtitle("A")+
   theme(axis.text = element_text(size = 12),
         axis.title.y = element_text(size = 20,),
-        axis.title.x = element_text(size = 20,))
+        axis.title.x = element_text(size = 20,),
+        plot.title = element_text(size=40))
 
 p
 
@@ -145,9 +150,11 @@ p <- ggplot() + geom_point(aes(x=bl.data$BL.phyml.Op[-which(Class.Phy2%in%c(5,6)
   #geom_label(label=paste("p-value",pearson$p.value,sep = ": "),
   #           aes(x=0.048,y=0.045),
   #           size=12)+
+  ggtitle("C")+
   theme(axis.text = element_text(size = 12),
         axis.title.y = element_text(size = 20,),
-        axis.title.x = element_text(size = 20,))
+        axis.title.x = element_text(size = 20,),
+        plot.title = element_text(size = 40))
 
 p
 
