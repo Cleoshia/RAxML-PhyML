@@ -55,7 +55,7 @@ p <- ggplot() + geom_point(aes(x=log(end$InternalTree1[-which(Class%in%c(5,6))])
                                colour=end$col[-which(Class%in%c(5,6))]))+
   #geom_smooth(aes(x=bl.data$BL.raxml[which(bl.data$BL.raxml<max(bl.data$BL.raxml))],
   #               y=bl.data$BL.phyml[which(bl.data$BL.phyml<max(bl.data$BL.phyml))]))+
-  ylab("log PhyML-NonOptimize Branch Length")+ xlab("log RAxML Branch Length")+
+  ylab("log PhyML-Optimize Branch Length")+ xlab("log RAxML Branch Length")+
   geom_abline(intercept=0,slope=spearman$estimate)+
   geom_label(label=paste("rho",round((spearman$estimate),digits=4),sep = ": "),
              aes(x=-17,y=0),
@@ -70,11 +70,11 @@ p <- ggplot() + geom_point(aes(x=log(end$InternalTree1[-which(Class%in%c(5,6))])
         axis.title.y = element_text(size = 20,),
         axis.title.x = element_text(size = 20,),
         plot.title=element_text(size=40),
-        legend.position=c(.17,.8),
+        legend.position=c(.17,.75),
         legend.title = element_text(size=25),
         legend.text = element_text(size = 25),
         legend.key.size = unit(1, "cm"))
-  
+
 
 p
 
